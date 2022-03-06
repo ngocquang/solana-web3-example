@@ -1,7 +1,6 @@
 const web3 = require('@solana/web3.js');
 const {struct, u32, ns64} = require("@solana/buffer-layout");
-
-path: (process.argv.includes('mainnet')) ? '../env/.env.mainnet' : '../env/.env'
+require('dotenv').config({ path: './env/.env' });
 const BufferLayout = require('buffer-layout');
 
 const PRIVATE_KEY = JSON.parse(process.env.PRIVATE_KEY);
